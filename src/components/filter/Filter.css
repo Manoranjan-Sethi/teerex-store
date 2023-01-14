@@ -1,0 +1,58 @@
+.filter {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 10%;
+  margin: 40px;
+  border-radius: 8px;
+  background-color: #354a5e;
+  color: #fff;
+}
+
+.radio-btn p {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.radio-btn label {
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.5em;
+}
+
+.clr-btn {
+  display: block;
+  margin-top: 10px;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+}
+
+.clr-btn:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}

@@ -9,8 +9,11 @@ function Navbar() {
         <h1>TeeRex Store</h1>
       </div>
       <div className="nav-prod-flex">
-        <h2>Products</h2>
-        <FiShoppingCart className="cart-icon" />
+        <h2 className="prod">Products</h2>
+        <div onClick={() => console.log("hi")} className="nav-cart-flex">
+          <FiShoppingCart className="cart-icon" />
+          <p>{10}</p>
+        </div>
       </div>
     </nav>
   );

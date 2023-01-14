@@ -1,0 +1,9 @@
+.product {
+  /* width: 30%; */
+  margin: 10px;
+  border: 1px solid red;
+}
+
+.product img {
+  width: 20%;
+}

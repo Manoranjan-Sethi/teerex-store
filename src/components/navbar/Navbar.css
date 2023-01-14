@@ -1,8 +1,9 @@
 .navbar {
   display: flex;
   justify-content: space-around;
-  background-color: #0d192d;
+  background-color: #202c38;
   color: #fff;
+  margin: -10px;
 }
 
 .nav-prod-flex {
@@ -12,8 +13,17 @@
   gap: 30px;
 }
 
+.nav-cart-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .navbar {
     background-color: black;
+  }
+  .prod {
+    display: none;
   }
 }
