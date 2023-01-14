@@ -6,18 +6,20 @@
   flex-direction: column;
   padding: 20px;
   width: 10%;
+  height: 100%;
   margin: 40px;
   border-radius: 8px;
   background-color: #354a5e;
   color: #fff;
+  position: relative;
 }
 
-.radio-btn p {
+.checkbox-btn p {
   font-size: 22px;
   font-weight: 500;
 }
 
-.radio-btn label {
+.checkbox-btn label {
   cursor: pointer;
   font-size: 18px;
   line-height: 1.5em;

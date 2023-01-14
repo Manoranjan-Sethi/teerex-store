@@ -19,6 +19,13 @@
   align-items: center;
 }
 
+.cart-icon {
+}
+
+.nav-prod-flex p {
+  font-size: 10px;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
   .navbar {
     background-color: black;
