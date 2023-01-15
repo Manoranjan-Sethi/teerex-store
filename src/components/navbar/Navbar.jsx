@@ -1,7 +1,7 @@
 import React from "react";
 import "./Navbar.css";
-import { FiShoppingCart } from "react-icons/fi";
 import { CartState } from "../context/Context";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const {
@@ -13,11 +13,19 @@ function Navbar() {
         <h1>TeeRex Store</h1>
       </div>
       <div className="nav-prod-flex">
-        <h2 className="prod">Products</h2>
-        <div onClick={() => console.log("hi")} className="nav-cart-flex">
-          <FiShoppingCart className="cart-icon" />
-          <p>{cart.length}</p>
-        </div>
+        <Link to="/">
+          <h2 className="prod">Products</h2>
+        </Link>
+        <Link to="/cart">
+          <div className="nav-cart-flex">
+            <img
+              className="cart-icon"
+              src="https://th.bing.com/th/id/OIP.bCF5V06G_WRqoVs2CYeICwAAAA?pid=ImgDet&rs=1"
+              alt="cart"
+            />
+            <p>{cart.length}</p>
+          </div>
+        </Link>
       </div>
     </nav>
   );

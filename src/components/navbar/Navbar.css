@@ -1,6 +1,8 @@
 .navbar {
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  text-align: center;
   background-color: #202c38;
   color: #fff;
   margin: -10px;
@@ -15,15 +17,24 @@
 
 .nav-cart-flex {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.nav-prod-flex h2 {
+  text-decoration: underline;
+  color: #fff;
 }
 
 .cart-icon {
+  width: 11%;
+  border-radius: 50%;
 }
 
 .nav-prod-flex p {
-  font-size: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {

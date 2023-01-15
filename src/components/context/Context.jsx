@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useReducer, useContext } from "react";
-import { cartReducer } from "./Reducer";
+import { cartReducer, productReducer } from "./Reducer";
 
 const initialState = {
   getData: [],
@@ -10,6 +10,14 @@ const Cart = createContext();
 
 function Context({ children }) {
   const [state, dispatch] = useReducer(cartReducer, initialState);
+
+  const [productState, productDispatch] = useReducer(productReducer, {
+    byColour: false,
+    byGender: false,
+    byPrice: false,
+    byType: false,
+    search: "",
+  });
 
   const allData = () =>
     fetch(
@@ -31,7 +39,11 @@ function Context({ children }) {
     allData();
   }, []);
 
-  return <Cart.Provider value={{ state, dispatch }}>{children}</Cart.Provider>;
+  return (
+    <Cart.Provider value={{ state, dispatch, productState, productDispatch }}>
+      {children}
+    </Cart.Provider>
+  );
 }
 
 export default Context;

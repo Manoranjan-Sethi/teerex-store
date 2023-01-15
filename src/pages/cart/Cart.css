@@ -1,0 +1,129 @@
+.cart {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  width: 70%;
+  margin: auto;
+  /* border: 1px solid blue; */
+}
+
+h1 {
+  font-weight: bolder;
+  margin-left: 30px;
+}
+.summary {
+  /* border: 1px solid green; */
+  width: 100%;
+}
+
+.cart-map {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  /* border: 1px solid red; */
+  width: 100%;
+}
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+}
+.metrics {
+  display: flex;
+  /* border: 2px solid red; */
+  gap: 20px;
+  /* align-items: center; */
+}
+.quantity {
+  margin-top: 30px;
+}
+
+.cart-img img {
+  width: 150px;
+}
+
+.total {
+  padding: 20px;
+  background-color: #354a5e;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 8px;
+  color: #fff;
+  width: 250px;
+  height: 150px;
+}
+
+.total p {
+  font-size: larger;
+  font-weight: bolder;
+}
+
+.remove-from-cart-btn {
+  position: relative;
+  font-size: 1.2em;
+  padding: 0.7em 1.4em;
+  background-color: #bf0426;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.5em;
+  color: #dedede;
+  box-shadow: 0.5em 0.5em 0.5em rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.remove-from-cart-btn ::before {
+  position: absolute;
+  content: "";
+  height: 0;
+  width: 0;
+  top: 0;
+  left: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(33, 33, 33, 1) 0%,
+    rgba(33, 33, 33, 1) 50%,
+    rgba(150, 4, 31, 1) 50%,
+    rgba(191, 4, 38, 1) 60%
+  );
+  border-radius: 0 0 0.5em 0;
+  box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.remove-from-cart-btn :hover::before {
+  width: 1.6em;
+  height: 1.6em;
+}
+
+.remove-from-cart-btn :active {
+  box-shadow: 0.2em 0.2em 0.3em rgba(0, 0, 0, 0.3);
+  transform: translate(0.1em, 0.1em);
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .cart {
+    flex-direction: column-reverse;
+  }
+  .cart-map {
+    flex-direction: column;
+    border: 1px solid #354a5e;
+    border-radius: 7px;
+  }
+  .summary {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content {
+    justify-content: space-around;
+    gap: 10px;
+  }
+
+  .remove-from-cart-btn {
+    padding: 5px 8px;
+    margin-bottom: 10px;
+  }
+}

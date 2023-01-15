@@ -58,3 +58,9 @@
     box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
   }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .filter {
+    display: none;
+  }
+}
